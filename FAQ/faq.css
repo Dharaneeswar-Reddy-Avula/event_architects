@@ -1,0 +1,67 @@
+
+.faqques h1{
+    font-family: "UnifrakturMaguntia", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    top:20px;
+}
+p{
+    font-family: "Roboto";
+    font-size: 25px;
+    font-weight: 500;
+}
+.quess{
+   position: relative;
+   top:20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap:20px;
+}
+#ques1{
+    border:2px solid cyan;
+    width:1000px;
+    border-radius: 10px;
+}
+#ques2{
+    border:2px solid cyan;
+    width:1000px;
+    border-radius: 10px;
+}
+#ques3{
+    border:2px solid cyan;
+    width:1000px;
+    border-radius: 10px;
+}
+#ques4{
+    border:2px solid cyan;
+    width:1000px;
+    border-radius: 10px;
+}
+.quesdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right:20px;
+}
+#negative1{
+    display:non
+}
+#negative2{
+    display: none;
+}
+#negative3{
+    display: none;
+}
+#negative4{
+    display: none;
+}
+.styling{
+    font-weight: 500;
+    position: relative;
+    bottom: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./faq.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Keania+One&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="faqques">
+        <h1>FAQ's</h1>
+        <div class="quess">
+        <div id="ques1" class="quesdiv">
+        <div id="block1">
+        <p>What is purpose of this website?</p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" id="positive1" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" id="negative1" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-440v-80h560v80H200Z"/ ></svg>
+        </div>
+         <div id="ques2" class="quesdiv">
+        <div id="block2">
+        <p>Who can use this website?</p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" id="positive2" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" id="negative2" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-440v-80h560v80H200Z"/></svg>
+        </div>
+         
+        <div id="ques3" class="quesdiv">
+        <div id="block3">
+        <p>What type of events are listed here?</p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" id="positive3" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" id="negative3" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-440v-80h560v80H200Z"/></svg>
+        </div>
+
+        <div id="ques4" class="quesdiv">
+        <div id="block4">
+        <p>Where do I find schedule of events?</p>
+        </div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" id="positive4" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" id="negative4" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-440v-80h560v80H200Z"/></svg>
+        </div>
+        </div>
+
+    </div>
+    </div>
+    <script>
+        let b1=document.getElementById("block1");
+        let b2=document.getElementById("positive1");
+        let b3=document.getElementById("negative1");
+
+
+        let c1=document.getElementById("block2");
+        let c2=document.getElementById("positive2");
+        let c3=document.getElementById("negative2");
+
+
+        let d1=document.getElementById("block3");
+        let d2=document.getElementById("positive3");
+        let d3=document.getElementById("negative3");
+
+
+        let e1=document.getElementById("block4");
+        let e2=document.getElementById("positive4");
+        let e3=document.getElementById("negative4");
+    
+        var n=document.createElement("span");
+        var n1=document.createElement("span")
+
+        b2.onclick=function(){
+            n.innerText="The purpose of this website is to streamline the management of college events by providing a centralized platform where students, faculty, and participants can find information about events, register easily, and stay updated on schedules and announcements";
+            b1.appendChild(n);
+            n.classList.add("styling")
+            b2.style.display="none";
+            b3.style.display="block";
+        }
+        b3.onclick=function(){
+            n.innerText="";
+            b2.style.display="block";
+            b3.style.display="none"; 
+        }
+
+
+
+        c2.onclick=function(){
+            n.innerText="This website is designed for college students, faculty members, and external participants (if allowed) who are interested in attending or organizing college events. Event coordinators can also use it to manage event details and participant registrations.";
+            c1.appendChild(n);
+            n.classList.add("styling")
+            c2.style.display="none";
+            c3.style.display="block";
+        }
+        c3.onclick=function(){
+            n.innerText="";
+            c2.style.display="block";
+            c3.style.display="none";
+        }
+
+
+        
+        d2.onclick=function(){
+            n.innerText="The website includes a variety of events such as technical competitions, cultural programs, sports tournaments, workshops, seminars, hackathons, and more. Each event is categorized for easy navigation.";
+            d1.appendChild(n);
+            n.classList.add("styling")
+            d2.style.display="none";
+            d3.style.display="block";
+        }
+        d3.onclick=function(){
+            n.innerText="";
+            d2.style.display="block";
+            d3.style.display="none";
+        }
+
+
+
+        e2.onclick=function(){
+            n.innerText="You can find the complete schedule of events on the 'Events Schedule' or 'Event Calendar' section of the website. This section lists all upcoming events with their dates, times, and venues. You can also filter events by category or search for specific events.";
+            e1.appendChild(n);
+            n.classList.add("styling")
+            e2.style.display="none";
+            e3.style.display="block";
+        }
+        e3.onclick=function(){
+            n.innerText="";
+            e2.style.display="block";
+            e3.style.display="none";
+        }
+        
+
+
+    </script>
+</body>
+</html>
