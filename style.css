@@ -3,12 +3,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+:root {
+    --black: #040d17;
+
 }
 html,body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    min-height: 100vh;
     overflow-x: hidden;
-    background-color: #040d17;
+    
+    background-color: var(--black);
     
 }
 header {
@@ -38,40 +44,62 @@ nav ul {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    
     list-style-type: none;
 }
 
 
+/*poster css*/
 #poster {
     width: 100vw;
-    height: 100vh;
+    height: 50vw;
     position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at center,#264457, #0c1b30);
 }
 
 #poster img {
     position: absolute;
 }
 
-#moon {
-    width: 100%;
-    transform: scale(0.5) translateY(-50%);
-    object-fit: cover;
-    top: 0px;
+#poster #moon {
+    width: 50vw;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 #bottom {
     width: 100%;
-    top: 55%;
+    bottom: 0;
 }
 
 #left {
     left: 0px;
-    top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(30%);
     width: 40%;
 }
 #right {
     right: 0px;
-    transform: translateY(50%);
+    transform: translateY(80%);
     width: 40%;
+}
+/*poster css completed*/
+
+/*about us*/
+#about { 
+    height: 100vh;
+}
+#about h1{
+    color: #CBFFFF;
+    font-family: Cattedrale;
+    text-align: center;
+    font-size: 4rem;
+}
+#about p {
+    padding: 1.5rem 10vw;
+    color: #a6a9ad;
+    font-family: Spirits-sharp;
+    font-size: 1.225rem;
+    line-height: 1.625;
+    letter-spacing: 1px;
 }
