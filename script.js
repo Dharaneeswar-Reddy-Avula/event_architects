@@ -6,10 +6,10 @@ let poster = document.getElementById('poster')
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
-    left.style.left = value * -1 + 'px';
-    right.style.right = value * -1 + 'px'; 
-    moon.style.top = value * 0.5 + 'px';
-    bottom.style.bottom = value * -0.1 + 'px'
+    left.style.transform = `translate(${value * -0.3 + 'px'}, -50%)`;
+    right.style.transform = `translate(${value * 0.3 + 'px'}, -50%)`
+    moon.style.transform = `translate(-50%,${value * 0.5 + 'px'})`;
+    bottom.style.transform = value * -0.01 + 'px';
 })
 
 
