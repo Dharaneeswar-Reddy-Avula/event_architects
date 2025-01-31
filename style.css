@@ -14,9 +14,8 @@ html,body {
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
-    
+    overscroll-behavior: contain;
     background-color: var(--black);
-    
 }
 header {
     display: flex;
@@ -76,12 +75,14 @@ nav ul {
 
 #left {
     left: 0px;
-    transform: translateY(30%);
+    top: 50%;
+    transform: translateY(-50%);
     width: 40%;
 }
 #right {
     right: 0px;
-    transform: translateY(80%);
+    top: 50%;
+    transform: translateY(-40%);
     width: 40%;
 }
 /*poster css completed*/
@@ -149,8 +150,14 @@ h2 {
 #sponsors div div img {
     width: 15%;
     height: auto;
+    pointer-events: none;
 }
 #sponsors div img:nth-child(2) {
     filter: drop-shadow(1px 1px 0px white )
             drop-shadow(-1px -1px 0px white);
+}
+
+/**/
+#left,#right ,#moon,#bottom{
+    transition: left right top bottom 2s ease-in-out 0s;
 }
