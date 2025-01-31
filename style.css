@@ -90,6 +90,7 @@ nav ul {
 /*about us*/
 #about,#events ,#sponsors{ 
     min-height: 100vh;
+    margin-top: 11vh;
 }
 #about h1, #events h1, h1 {
     color: #CBFFFF;
@@ -158,6 +159,6 @@ h2 {
 }
 
 /**/
-#left,#right ,#moon,#bottom{
-    transition: left right top bottom 2s ease-in-out 0s;
+#left,#right,#moon,#bottom{
+    transition: transform 0.2s ease-out 0s;
 }
