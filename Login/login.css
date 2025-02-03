@@ -1,7 +1,23 @@
-img{
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+.into-image {
+    /* overflow: hidden; */
+    height: 100%;
+    width: 100%;
     background-image: url('../assets/bg-moon_vrzugt.png');
-    width:100%;
-    height:97vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 .forfont{
     font-family: "UnifrakturMaguntia", serif;
@@ -15,11 +31,6 @@ img{
 .overall-page{
     display: flex;
     flex-direction: column;  
-}
-.into-image{
-    margin: auto;
-    position: relative;
-    bottom:500px;
 }
 .input-items{
     display: flex;
@@ -58,3 +69,29 @@ img{
     color: red;
     font-size: 17px;
 }
+/* @media(max-width:1280px){
+     .into-image{
+    margin: auto;
+    position: relative;
+    bottom:620px;
+}
+} */
+/* @media(max-width:1024px){
+    .into-image{
+        margin: auto;
+        position: relative;
+        bottom:500px
+}}
+@media(max-width:800px){
+    .into-image{
+        margin: auto;
+        position: relative;
+        bottom:430px
+}}
+@media(max-width:500px){
+    .into-image{
+        margin: auto;
+        position: relative;
+        bottom:300px;
+}
+} */
