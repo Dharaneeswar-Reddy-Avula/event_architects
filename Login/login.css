@@ -6,7 +6,6 @@ body {
     width: 100vw;
 }
 .into-image {
-    /* overflow: hidden; */
     height: 100%;
     width: 100%;
     background-image: url('../assets/bg-moon_vrzugt.png');
@@ -69,29 +68,3 @@ body {
     color: red;
     font-size: 17px;
 }
-/* @media(max-width:1280px){
-     .into-image{
-    margin: auto;
-    position: relative;
-    bottom:620px;
-}
-} */
-/* @media(max-width:1024px){
-    .into-image{
-        margin: auto;
-        position: relative;
-        bottom:500px
-}}
-@media(max-width:800px){
-    .into-image{
-        margin: auto;
-        position: relative;
-        bottom:430px
-}}
-@media(max-width:500px){
-    .into-image{
-        margin: auto;
-        position: relative;
-        bottom:300px;
-}
-} */

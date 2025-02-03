@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .parent{
+            display: flex;
+            flex-direction: row;
+            height: auto;
+            width: 100%;
+            border: 2px solid black;
+            flex-wrap: wrap;
+        }
+        .child{
+            height: 300px;
+            border: 1px solid white;
+            flex: 1 0;
+            min-width: 150px;
+        }   
+        #c2{
+             text-align: center;
+             line-height: 1.6;
+        } 
+        #c3{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gopi{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: auto;
+            width: 100%;
+            /* border: 2px solid black; */
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .gopi a ,#c2 a {
+           
+            text-decoration: none;
+        }
+        #i{
+             background-color: black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #i img {
+                border: 3px solid black;
+                transition: border 0.3s ease-in-out;
+                border-radius: 8px;
+            }
+        #i img:hover {
+                 border: 1px solid whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div id="c1" class="child">
+            <img src="/assets/Branding_yt0agf (1).png">
+            NITRUTSAV, the annual Literary and 
+            Cultural festival of National Institute of
+             Technology, Rourkela aims at providing 
+             students with a creative platform to
+              commemorate and introspectively explore 
+              the dimensions of artistry and foster an 
+              environment of literary spree and cultural
+               diversity in the campus.
+        </div>
+        <div id="c2" class="child">
+            Quick Links<br>
+            <a href="">About us</a><br>
+            <a href="">Events </a><br>
+            <a href="">Sponsors</a><br>
+            <a href="">FAQs</a><br>
+            <a href="">Contact Us</a>
+        </div>
+        <div id="c3" class="child">
+            <img src="/assets/Frame_36878_y7onca.png">
+        </div>
+        <div id="c4" class="child">
+            Opening Hours<br><br>
+            Weekdays: 09:00-22:00<br>
+            Weekend: 09:00-23:00
+        </div>
+        <div id="c5" class="child">
+            Contact Us<br><br>
+            Aditya: 6371475323<br>
+            Swastik: 7205548190<br>
+            contact@nitrutsav.com<br><br>
+            Address: SAC, National Institute of
+            Technology, Rourkela, Odisha, India,
+            769008
+        </div>
+    </div>
+    <br><br>
+    <hr color="red">
+    Magically molded with 🤍 and a sprinkle of Chemical 𝕏 by Team   <img src="/assets/webwiz.svg" height="12px">
+    <div class="gopi">
+        <a href="">Privacy Policy</a>
+        <a href="">Terms and Conditions</a>
+        <a href="">Refund Policy</a>
+        <a href="">Code of Conduct</a>
+        <div id="i"class="s">
+            <img src="/assets/nuxww.png" >
+        </div>
+    </div>
+</body>
+</html>
