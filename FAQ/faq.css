@@ -6,6 +6,7 @@
     font-size: 30px;
     text-align: center;
     top:20px;
+    color:cyan;
 }
 p{
     font-family: "Roboto";
@@ -19,6 +20,7 @@ p{
    flex-direction: column;
    align-items: center;
    gap:20px;
+   color: cyan;
 }
 #ques1{
     border:2px solid cyan;
