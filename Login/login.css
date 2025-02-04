@@ -1,0 +1,60 @@
+img{
+    background-image: url('../assets/bg-moon_vrzugt.png');
+    width:100%;
+    height:97vh;
+}
+.forfont{
+    font-family: "UnifrakturMaguntia", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 78px;
+    text-align: center;
+    position: relative;
+    top:-20px;
+}
+.overall-page{
+    display: flex;
+    flex-direction: column;  
+}
+.into-image{
+    margin: auto;
+    position: relative;
+    bottom:500px;
+}
+.input-items{
+    display: flex;
+    flex-direction: column;
+    width:330px;
+    gap:10px;
+    text-align: center;
+    position: relative;
+    top:-50px;
+}
+.input-items input{
+    padding:10px;
+    outline: none;
+    border:none;
+    background-color: rgb(100, 149, 237,0.4);
+    border-radius: 3px;
+}
+.input-items input:hover{
+    border: 1px solid black;
+}
+.input-items button{
+    padding:8px;
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    background-color: rgb(29, 29, 70);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+.input-items a{
+    color: rgb(7, 7, 238,0.6);
+    cursor: pointer;
+}
+.error {
+    color: red;
+    font-size: 17px;
+}
