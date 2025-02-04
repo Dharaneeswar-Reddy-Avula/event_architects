@@ -3,13 +3,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    ;
+}
+:root {
+    --black: #040d17;
+    --grey: #a6a9ad;
 }
 html,body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    min-height: 100vh;
     overflow-x: hidden;
-    background-color: #040d17;
-    
+    overscroll-behavior: contain;
+    background-color: var(--black);
 }
 header {
     display: flex;
@@ -38,40 +44,138 @@ nav ul {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    
     list-style-type: none;
 }
 
 
+/*poster css*/
 #poster {
     width: 100vw;
-    height: 100vh;
+    height: 50vw;
     position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at center,#264457, #0c1b30);
 }
-
+#title {
+    position: absolute;
+    color: #003955;
+    font-size: 10vw;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,0%);
+    z-index: 4;
+}
 #poster img {
     position: absolute;
 }
 
-#moon {
-    width: 100%;
-    transform: scale(0.5) translateY(-50%);
-    object-fit: cover;
-    top: 0px;
+#poster #moon {
+    width: 50vw;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%,0%);
 }
+
 #bottom {
     width: 100%;
-    top: 55%;
+    bottom: 0;
+    z-index: 5;
 }
 
 #left {
     left: 0px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(0%,-50%);
     width: 40%;
+    z-index: 5;
 }
 #right {
     right: 0px;
-    transform: translateY(50%);
+    top: 50%;
+    transform: translate(0%,-40%);
     width: 40%;
+    z-index: 5;
+}
+/*poster css completed*/
+
+/*about us*/
+#about {
+    background-image: url(assets/witch.svg) ,url(assets/Tombstone-yellow.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 100%,  5% 100%;
+    background-size: 40% auto, 40% auto;
+}
+#about,#events ,#sponsors{ 
+    min-height: 100vh;
+    margin-top: 11vh;
+}
+#about h1, #events h1, h1 {
+    color: #CBFFFF;
+    font-family: Cattedrale;
+    text-align: center;
+    font-size: 4rem;
+}
+#about p {
+    padding: 1.5rem 10vw;
+    color: #a6a9ad;
+    font-family: Spirits-sharp;
+    font-size: 1.225rem;
+    line-height: 1.625;
+    letter-spacing: 1px;
+}
+
+/*events cards*/
+#events h1 {
+    font-family: Shlop;
+}
+#event-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.event-card-image{
+    width: 224px;
+    height: 369px;
+    margin: 1.5em 1em;
+}
+.event-card-image img {
+    object-fit: contain;
+    width: 100%;
+    filter: grayscale(1);
+
+    transition: all 0.2s ease-in ;
+}
+.event-card-image:hover img {
+    transform: rotateY(180deg) scaleX(-1);
+    filter: grayscale(0);
+}
+
+/*sponsors*/
+h2 {
+    color: var(--grey);
+    font-family: spirits-sharp;
+    text-align: center;
+    font-size: 1.2rem;
+}
+#sponsors div div {
+    margin: 20px 0 0 0;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+#sponsors div div img {
+    width: 15%;
+    height: auto;
+    pointer-events: none;
+}
+#sponsors div img:nth-child(2) {
+    filter: drop-shadow(1px 1px 0px white )
+            drop-shadow(-1px -1px 0px white);
+}
+
+/**/
+#left,#right,#moon,#bottom{
+    transition: transform 0.2s ease-out 0s;
 }
