@@ -1,15 +1,18 @@
-
+@import url(../assets/fonts/fonts.css);
+:root {
+    --blue: #cbFFFF;
+}
 .faqques h1{
-    font-family: "UnifrakturMaguntia", serif;
+    font-family: Cattedrale, serif;
     font-weight: 800;
     font-style: normal;
     font-size: 30px;
     text-align: center;
     top:20px;
-    color:cyan;
+    color: var(--blue);
 }
 p{
-    font-family: "Roboto";
+    font-family: spirits-sharp;
     font-size: 25px;
     font-weight: 500;
 }
@@ -20,9 +23,9 @@ p{
    flex-direction: column;
    align-items: center;
    gap:20px;
-   color: cyan;
+   color: var(--blue);
 }
-#ques1{
+/* #ques1{
     border:2px solid cyan;
     width:1000px;
     border-radius: 10px;
@@ -41,11 +44,14 @@ p{
     border:2px solid cyan;
     width:1000px;
     border-radius: 10px;
-}
+} */
 .quesdiv{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
+    width: 90%;
+    border:2px solid var(--blue);
     padding-left: 20px;
     padding-right:20px;
 }
