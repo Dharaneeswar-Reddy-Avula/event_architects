@@ -179,3 +179,7 @@ h2 {
 #left,#right,#moon,#bottom{
     transition: transform 0.2s ease-out 0s;
 }
+
+iframe {
+    border: none;
+}
