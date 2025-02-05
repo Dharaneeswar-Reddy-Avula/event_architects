@@ -1,3 +1,4 @@
+@import url(../assets/fonts/fonts.css);
 * {
     box-sizing: border-box;
 }
@@ -19,7 +20,7 @@ body {
 
 }
 .forfont{
-    font-family: "UnifrakturMaguntia", serif;
+    font-family: "Cattedrale", serif;
     font-weight: 800;
     font-style: normal;
     font-size: 78px;

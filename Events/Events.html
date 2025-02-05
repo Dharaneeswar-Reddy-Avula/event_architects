@@ -1,13 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js" async></script>
-    <spline-viewer url="https://prod.spline.design/kNYOqtdoyCBbbMG6/scene.splinecode"><img src="data:image/png;base64,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" alt="Spline preview" style="width: 100%; height: 100%;"/></spline-viewer>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    :root {
+    --black: #040d17;
+    --grey: #a6a9ad;
+    }
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      background-color: var(--black);
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+    #cover {
+        position: relative !important;
+        top: -60px !important;
+        z-index: 999;
+        background-color: black;
+        height: 50px;
+    }
+  </style>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/kNYOqtdoyCBbbMG6/scene.splinecode"></spline-viewer>
 </head>
+
 <body>
-    Events
+    <div id="cover">
+
+    </div>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="events_assets/clay-workshop (2).webp" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/4.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/5.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/6.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/7.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/clay-workshop.webp" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/general quiz(1b).png" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/Guess me out (1c).png" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/india quiz(1d).jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/Instagram post - 114 (1j)..jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/Kaarvaan (1h).png.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/knightout (1f).png.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/Lumiere (1e).jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/mela quiz (1i).png.jpg" />
+      </div><div class="swiper-slide">
+        <img src="events_assets/MONOACT (1g).png.jpg" />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
+
 </html>
