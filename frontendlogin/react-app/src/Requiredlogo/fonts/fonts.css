@@ -1,0 +1,18 @@
+@font-face {
+    font-family: Cattedrale;
+    src: url("Cattedrale-Demo-Regular.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: shlop;
+    src: url("shlop.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Spirits-Sharp;
+    src: url(Spirits-Sharp.otf);
+    font-weight: normal;
+    font-style: normal;
+}
