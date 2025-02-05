@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Signup</title>
+    <link rel="stylesheet" href="Register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Keania+One&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="into-image">
-        <h1 class="forfont">LOGIN</h1>
+        <h1 class="forfont">REGISTER</h1>
         <div class="input-items">
-        <input type="email" placeholder="Email" class="emailinput" id="email" required/>
+        <input type="text" placeholder="Enter your name" class="nameinout" id="name" required/>
+        <input type="email" placeholder="Enter your email" class="emailinput" id="email" required/>
         <span id="emailError" class="error"></span>
-        <input type="password" placeholder="Password" class="passwordinput" id="password"/>
+        <input type="password" placeholder="Enter your password" class="passwordinput" id="password"/>
         <span id="passwordError" class="error"></span>
-        <button id="loginButton">Login</button>
-        <p>Need an account?<a href="../Register/Register.html">Register</a></p>
+        <button id="loginButton">Register</button>
+        <p>Already have an account?<a href="../Login/login.html">Login</a></p>
         </div>
     </div>
     <script>
