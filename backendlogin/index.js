@@ -19,29 +19,6 @@ mongoose.connect("mongodb://localhost:27017/Project")
     console.log(err)
 })
 
-// we create this to find the user
-const fetchUser  = async (req, res, next) => {
-    const token = req.header("auth-token");
-    if (!token) {
-        return res.status(401).send({ errors: "Please authenticate token" });
-    } else {
-        try {
-            // HERE after token given thing should be same in both should give the secret_ecom if different we cannot get correct output
-            const data = jwt.verify(token, "secret_ecom");
-            // { use: { id: '679bbda88b2688b510878f50' }, iat: 1738306622 } here the id is present in use key so we should use data.use
-            // here in login we save our id in use 
-            req.use = data.use; // Assuming 'users' is a property in the token payload
-            next(
-                
-             );
-            // When you call next(), it tells Express to move on to the next middleware function in the stack. If you don't call next(), the request will hang, and the response will not be sent, as Express will not know to continue processing.
-        } catch (error) {
-            console.error("Token verification error:", error); // Log the error
-            return res.status(401).send({ errors: "Please authenticate using a valid token" });
-        }
-    }
-};
-
 
 const Users=mongoose.model("User",{
     name:{
