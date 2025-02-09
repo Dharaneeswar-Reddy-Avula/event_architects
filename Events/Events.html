@@ -1,11 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    @import url(../assets/fonts/fonts.css);
+    :root {
+    --black: #040d17;
+    --grey: #a6a9ad;
+    }
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      background-color: var(--black);
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+    #cover {
+        position: relative !important;
+        top: -60px !important;
+        z-index: 999;
+        background-color: var(--black);
+        height: 60px;
+    }
+    #title {
+        color: #CBFFFF;
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        font-size: 5em;
+        font-weight: bold;
+        font-family: shlop;
+        transform: translate(-50%);
+        text-align: center;
+    }
+  </style>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+  <spline-viewer loading-anim-type="none" url="https://prod.spline.design/kNYOqtdoyCBbbMG6/scene.splinecode"></spline-viewer>
 </head>
+
 <body>
-    Events
+    <h1 id="title">EVENTS</h1>
+    <div id="cover">
+
+    </div>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="events_assets/clay-workshop (2).webp" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/4.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/5.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/6.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/7.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/clay-workshop.webp" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/general quiz(1b).png" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/Guess me out (1c).png" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/india quiz(1d).jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/Instagram post - 114 (1j)..jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/Kaarvaan (1h).png.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/knightout (1f).png.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/Lumiere (1e).jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="events_assets/mela quiz (1i).png.jpg" />
+      </div><div class="swiper-slide">
+        <img src="events_assets/MONOACT (1g).png.jpg" />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
+
 </html>

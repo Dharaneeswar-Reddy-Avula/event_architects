@@ -5,27 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    
+    <!--Header section-->
     <header>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Sponsors</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="Events/Events.html">Events</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#">Accommodation</a></li>
                 <li><a href="#">Schedule</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="http://localhost:3000" target="_blank">Login</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- poster section-->
     <div id="poster">
+        <h1 id="title">Fright Fest</h1>
         <img src="assets/moon.svg" alt="" id="moon">
-        <img src="assets/left.png" alt="" id="left">
+       <img src="assets/left.png" alt="" id="left">
         <img src="assets/right.png" alt="" id="right">
         <img src="assets/bottom.svg" alt="" id="bottom">
+        
     </div>
+
+    <!--About Section-->
+    <section id="about">
+        <h1>ABOUT US</h1>
+        <p>
+            FRIGHTFEST 2025: Andhara pradesh's grandest literary and 
+            cultural spectacle returns with an eerie twist—"Mythica:
+            Shadows of the Past and Magic of the Future." From 7th to 9th February,
+            2025, Rajiv gandhi University of Knowledge Technologuies,Nuzvid, becomes a portal
+            to a realm where ancient secrets collide with forbidden magic. Unravel 
+            the mysteries of long-forgotten legends, venture into the shadows of the 
+            unknown, and awaken the arcane forces that blur the line between past and 
+            future. Prepare for a spine-chilling journey through myth and mystery—where
+            every whisper hides a story, and every shadow holds a secret. Dare to join us ?
+        </p>
+    </section>
+    <section id="events">
+        <h1>EVENTS</h1>
+        <div id="event-cards">
+            <div class="event-card-image">
+                <img src="assets/1.jpg" alt="">
+            </div>
+            <div class="event-card-image">
+                <img src="assets/2.jpg" alt="">
+            </div>
+            <div class="event-card-image">
+                <img src="assets/3.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors">
+        <h1>SPONSORS</h1>
+
+        <div>
+            <h2>Tech partners</h2>
+            <div>
+                <img src="Sponsors/tech/Microsoft-Logo.wine.svg" alt="">
+                <img src="Sponsors/tech/Amazon_(company)-Logo.wine.svg">
+                <img src="Sponsors/tech/Facebook-Logo.wine.svg" alt="">
+                <img src="Sponsors/tech/Audible_(store)-Logo.wine.svg" alt="">
+               
+            </div>
+        </div>
+
+        <div>
+            <h2>Fashion partners</h2>
+            <div>
+                <img src="Sponsors/fashion/Adidas-White-Logo.wine.svg" alt="">
+                <img src="Sponsors/fashion/Nike,_Inc.-Nike-White-Logo.wine.svg" alt="">   
+            </div>
+        </div>
+
+        <div >
+            <h2>Food & Beverage partners</h2>
+            <div>
+                <img src="Sponsors/snack/Burger_King-Logo.wine.svg" alt="">
+                <img src="Sponsors/snack/Nestlé-Logo.wine.svg" >
+                <img src="Sponsors/snack/Coca-Cola-Logo.wine.svg" alt="">
+                <img src="Sponsors/snack/Red_Bull-Logo.wine.svg" alt="">
+                <img src="Sponsors/snack/Parle_Products-Logo.wine.svg" alt="">
+               
+            </div>
+        </div>
+
+        <div >
+            <h2>Radio Partner</h2>
+            <div>
+                <img src="Sponsors/radio/Spotify-Logo.wine.svg" alt=""> 
+            </div>
+        </div>
+
+        <div >
+            <h2>Online Streaming Partner</h2>
+            <div>
+                <img src="Sponsors/radio/Netflix-Logo.wine.svg" alt=""> 
+            </div>
+        </div>
+    </section>
+
+    <iframe src="FAQ/faq.html" width="100%" height ="550px"></iframe>
+    <div id="contact">
+        <iframe src="footer.html" width="100%" height="500px"></iframe>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
