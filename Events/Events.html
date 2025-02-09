@@ -48,12 +48,22 @@
       display: block;
       width: 100%;
     }
+    #cover p {
+      color: #CBFFFF;
+      font-family: Cattedrale;
+      font-size: large;
+    }
     #cover {
-        position: relative !important;
-        top: -60px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        position: absolute !important;
+        top: 90% !important;
+        right: 20px;
         z-index: 999;
         background-color: var(--black);
-        height: 60px;
+        height: 35px;
+        width: 140px;
     }
     #title {
         color: #CBFFFF;
@@ -67,16 +77,17 @@
         text-align: center;
     }
   </style>
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.63/build/spline-viewer.js"></script>
   <spline-viewer loading-anim-type="none" url="https://prod.spline.design/kNYOqtdoyCBbbMG6/scene.splinecode"></spline-viewer>
-</head>
+  </head>
 
 <body>
-    <h1 id="title">EVENTS</h1>
-    <div id="cover">
-
-    </div>
+  <h1 id="title">EVENTS</h1>
+  <div id="cover">
+    <p>Fright Fest</p>
+  </div>
   <!-- Swiper -->
+  <h2>WorkShops</h2>
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -96,7 +107,13 @@
       </div>
       <div class="swiper-slide">
         <img src="events_assets/clay-workshop.webp" />
-      </div>
+      </div>   
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="events_assets/general quiz(1b).png" />
       </div>
@@ -120,7 +137,8 @@
       </div>
       <div class="swiper-slide">
         <img src="events_assets/mela quiz (1i).png.jpg" />
-      </div><div class="swiper-slide">
+      </div>
+      <div class="swiper-slide">
         <img src="events_assets/MONOACT (1g).png.jpg" />
       </div>
     </div>
@@ -131,10 +149,11 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
+
   <script>
     var swiper = new Swiper(".mySwiper", {
       effect: "coverflow",
-      grabCursor: true,
+      grabCursor: false,
       centeredSlides: true,
       slidesPerView: "auto",
       coverflowEffect: {
