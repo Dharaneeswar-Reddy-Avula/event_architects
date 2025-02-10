@@ -25,13 +25,12 @@ nav {
     z-index: 999;
     display: flex;
     position: fixed;
-    background: rgba(0, 0, 0, 0.349);
+    background: rgba(0, 0, 0, 0.349) ;
     height: 50px;
     width: 70%;
     max-width: 700px;
     margin: 20px auto;
     border-radius: 30px;
-
 }
 nav a {
     font-family: Cattedrale;
@@ -183,4 +182,9 @@ h2 {
 
 iframe {
     border: none;
+}
+
+.event-card-image p{
+    font-family: shlop;
+    letter-spacing: 2px;
 }
