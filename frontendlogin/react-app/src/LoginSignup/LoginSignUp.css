@@ -49,6 +49,7 @@ body,html{
 }
 .loginsignup-fields input::placeholder{
     color: rgb(29, 29, 70);
+    font-size:15px;
 }
 .loginsignup-container button{
     padding:8px;
