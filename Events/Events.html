@@ -16,7 +16,7 @@
       --grey: #a6a9ad;
       --modal-bg: #1a1a2e;
       --modal-text: #cbffff;
-      --accent: #e94560;
+      --accent: #1a1617;
     }
     html,
     body {
@@ -38,6 +38,9 @@
       width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .swiper-slide {
@@ -162,7 +165,7 @@
   </div>
   <!-- Swiper -->
   <h2>WorkShops</h2>
-  <div class="swiper mySwiper">
+  <div class="swiper mySwiper" style="display: flex; justify-content: center;">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="events_assets/clay-workshop (2).webp" />
@@ -253,22 +256,24 @@
   <!-- Initialize Swiper -->
 
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: false,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
+  var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: false,
+  centeredSlides: true,
+  slidesPerView: "4",
+  loop: true, // Enable looping
+  
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
 
     document.querySelectorAll('.swiper-slide').forEach(slide => {
       slide.addEventListener('click', () => {
