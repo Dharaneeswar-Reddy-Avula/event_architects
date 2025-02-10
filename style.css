@@ -185,11 +185,6 @@ iframe {
 }
 
 .event-card-image p{
-    position: absolute;
-    color: white;
-    font-family: SHlop;
-    font-size: 2em;
-
-    width: 100%;
-    border: solid 1px red;
+    font-family: shlop;
+    letter-spacing: 2px;
 }
