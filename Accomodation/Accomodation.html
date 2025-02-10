@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accommodation | Event Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Keania+One&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -20,29 +22,37 @@ body {
 }
 
 /* Header */
+
 header {
-    background: #0056b3;
-    color: white;
-    padding: 15px;
+    display: flex;
+    justify-content: center;
 }
+nav {
+    z-index: 999;
+    display: flex;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.349);
+    height: 50px;
+    width: 70%;
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 30px;
 
-nav ul {
-    list-style: none;
-    padding: 0;
 }
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
+nav a {
+    font-weight: normal;
     text-decoration: none;
-    font-weight: bold;
+    color: #fff;
+    font-family: Cathedral;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
 }
 
-/* Sections */
 section {
     max-width: 500px;
     padding: 20px;
@@ -56,7 +66,6 @@ backdrop-filter: blur(10px);
 border: 1px solid rgba(255, 255, 255, 0.959);    
 }
 
-/* Inputs & Buttons */
 input {
     width: 80%;
     padding: 10px;
@@ -90,7 +99,21 @@ footer {
 </head>
 <body>
  
-  
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="../Events/Events.html">Events</a></li>
+                <li><a href="#">Sponsors</a></li>
+                <li><a href="../Accomodation/Accomodation.html">Accommodation</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="http://localhost:3000" target="_blank">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Accommodation Section -->
     <section class="accommodation">
         <h2>Check Accommodation Status</h2>
@@ -104,8 +127,6 @@ footer {
     <section class="register" id="registerSection" style="display: none;">
         <h2>Register for Accommodation</h2>
         <p>You're not registered. Please register to get a room.</p>
-        <input type="text" id="name" placeholder="Enter Your Name">
-        <button onclick="registerUser()">Register</button>
     </section>
 
   
