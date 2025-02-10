@@ -12,8 +12,11 @@
   <style>
     @import url(../assets/fonts/fonts.css);
     :root {
-    --black: #040d17;
-    --grey: #a6a9ad;
+      --black: #040d17;
+      --grey: #a6a9ad;
+      --modal-bg: #1a1a2e;
+      --modal-text: #cbffff;
+      --accent: #e94560;
     }
     html,
     body {
@@ -75,6 +78,77 @@
         font-family: shlop;
         transform: translate(-50%);
         text-align: center;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      background-color: var(--modal-bg);
+      width: 80%;
+      height: 50vh;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      color: var(--modal-text);
+      overflow: hidden;
+    }
+
+    .modal.active {
+      display: block;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: var(--accent);
+    }
+
+    .modal-header h2 {
+      margin: 0;
+    }
+
+    .modal-header .close-btn {
+      cursor: pointer;
+      font-size: 1.5em;
+      color: var(--modal-text);
+    }
+
+    .modal-tabs {
+      display: flex;
+      justify-content: space-around;
+      background: var(--grey);
+    }
+
+    .modal-tabs button {
+      flex: 1;
+      padding: 10px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--black);
+      font-weight: bold;
+    }
+
+    .modal-tabs button.active {
+      background: var(--accent);
+      color: var(--modal-text);
+    }
+
+    .modal-content {
+      padding: 20px;
+      display: none;
+    }
+
+    .modal-content.active {
+      display: block;
     }
   </style>
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.63/build/spline-viewer.js"></script>
@@ -145,6 +219,34 @@
     <div class="swiper-pagination"></div>
   </div>
 
+
+  <div id="event-modal" class="modal">
+    <div class="modal-header">
+      <h2 id="modal-title">Event Title</h2>
+      <span class="close-btn">&times;</span>
+    </div>
+    <div class="modal-tabs">
+      <button data-tab="overview" class="active">Overview</button>
+      <button data-tab="venue">Venue</button>
+      <button data-tab="rules">Rules</button>
+      <button data-tab="contact">Contact</button>
+    </div>
+    <div id="overview" class="modal-content active">
+      <p>This event is about...</p>
+      <p><strong>Team Size:</strong> 2-4</p>
+      <p><strong>No. of Rounds:</strong> 3</p>
+    </div>
+    <div id="venue" class="modal-content">
+      <p>Venue: AB-2 G7 to G10</p>
+    </div>
+    <div id="rules" class="modal-content">
+      <p>Rules and regulations will be updated soon.</p>
+    </div>
+    <div id="contact" class="modal-content">
+      <p>Phone Number: 9581164547</p>
+      <p>Email: frightfestrguktn@gmail.com</p>
+    </div>
+  </div>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -166,6 +268,61 @@
       pagination: {
         el: ".swiper-pagination",
       },
+    });
+
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+      slide.addEventListener('click', () => {
+        const eventName = slide.dataset.event;
+        const modal = document.createElement('div');
+        modal.classList.add('modal', 'active');
+
+        modal.innerHTML = `
+          <div class="modal-header">
+            <h2>${eventName}</h2>
+            <span class="close-btn">&times;</span>
+          </div>
+          <div class="modal-tabs">
+            <button data-tab="overview" class="active">Overview</button>
+            <button data-tab="venue">Venue</button>
+            <button data-tab="rules">Rules</button>
+            <button data-tab="contact">Contact</button>
+          </div>
+          <div id="overview" class="modal-content active">
+            <p>This event is about ${eventName}...</p>
+            <p><strong>Team Size:</strong> 2-4</p>
+            <p><strong>No. of Rounds:</strong> 3</p>
+          </div>
+          <div id="venue" class="modal-content">
+            <p>Venue: AB-2 G7 to G10</p>
+          </div>
+          <div id="rules" class="modal-content">
+            <p>Rules and regulations will be updated soon.</p>
+          </div>
+          <div id="contact" class="modal-content">
+            <p>Phone Number: 9581164547</p>
+            <p>Email: frightfestrguktn@gmail.com</p>
+          </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        modal.querySelector('.close-btn').addEventListener('click', () => {
+          modal.remove();
+        });
+
+        const tabs = modal.querySelectorAll('.modal-tabs button');
+        const contents = modal.querySelectorAll('.modal-content');
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            contents.forEach(content => content.classList.remove('active'));
+            modal.querySelector(`#${tab.dataset.tab}`).classList.add('active');
+          });
+        });
+      });
     });
   </script>
 </body>

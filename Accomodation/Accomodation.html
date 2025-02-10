@@ -3,9 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Accommodation | Event Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('../assets//bg-moon_vrzugt.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background: #0056b3;
+    color: white;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sections */
+section {
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 40%;
+    background: rgba(255,255,255,0.5);
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.959);    
+}
+
+/* Inputs & Buttons */
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #003d82;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+    </style>
 </head>
 <body>
-    Accomodation
+ 
+  
+    <!-- Accommodation Section -->
+    <section class="accommodation">
+        <h2>Check Accommodation Status</h2>
+        <p>Enter your registration ID to check your room allocation.</p>
+        <input type="text" id="regID" placeholder="Enter Registration ID">
+        <button onclick="checkAccommodation()">Check</button>
+        <p id="status"></p>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="register" id="registerSection" style="display: none;">
+        <h2>Register for Accommodation</h2>
+        <p>You're not registered. Please register to get a room.</p>
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <button onclick="registerUser()">Register</button>
+    </section>
+
+  
+    <script>
+        // Sample registered users and allocated rooms (For testing)
+let registeredUsers = {
+    "1234": { name: "Aditya", room: "FF-14B", block: "I3" },
+    "5678": { name: "Swastik", room: "FF-24B", block: "I2" }
+};
+
+// Function to check accommodation status
+function checkAccommodation() {
+    let regID = document.getElementById("regID").value.trim();
+    let statusText = document.getElementById("status");
+    
+    if (registeredUsers[regID]) {
+        // If registered, show allocated room
+        let user = registeredUsers[regID];
+        statusText.innerHTML = `✅ Registered! Your Room: <strong>${user.room}</strong>, ${user.block}.`;
+        statusText.style.color = "green";
+    } else {
+        // If not registered, show registration section
+        statusText.innerHTML = `❌ Not registered. Please register below.`;
+        statusText.style.color = "red";
+        document.getElementById("registerSection").style.display = "block";
+    }
+}
+
+// Function to register new user and allocate room
+function registerUser() {
+    let regID = document.getElementById("regID").value.trim();
+    let name = document.getElementById("name").value.trim();
+    let statusText = document.getElementById("status");
+
+    if (!regID || !name) {
+        alert("Please enter your registration ID and name.");
+        return;
+    }
+
+    // Random room allocation
+    let roomNumber = "A-" + Math.floor(100 + Math.random() * 900);
+    let block = "Block A";
+
+    // Store in the registeredUsers object
+    registeredUsers[regID] = { name: name, room: roomNumber, block: block };
+
+    // Hide registration form and show allocated room
+    document.getElementById("registerSection").style.display = "none";
+    statusText.innerHTML = `✅ Successfully registered! Your Room: <strong>${roomNumber}</strong>, ${block}.`;
+    statusText.style.color = "green";
+}
+
+    </script>
 </body>
 </html>
