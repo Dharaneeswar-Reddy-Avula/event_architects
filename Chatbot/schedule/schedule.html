@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spooky Event Schedule</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #cbffff;
+            font-family: 'Creepster', cursive;
+            margin: 0;
+            padding: 20px;
+            background-opacity: 0.1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #cbffff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #cbffff;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000;
+            margin-bottom: 30px;
+        }
+
+        .event {
+            background-color: #2d2d2d;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #cbffff;
+            transition: transform 0.3s ease;
+        }
+
+        .event:hover {
+            transform: translateX(10px);
+            box-shadow: 0 0 15px #cbffff;
+        }
+
+        .event-title {
+            color: #cbffff;
+            font-size: 1.5em;
+            margin: 0 0 10px 0;
+        }
+
+        .event-time {
+            color: #ffd700;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        .event-location {
+            color: #cbffff;
+            font-style: italic;
+        }
+
+        .event-description {
+            color: #cccccc;
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .spider-web {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            opacity: 0.3;
+            pointer-events: none;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="150" height="150"><text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="80">🕸️</text></svg>');
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="spider-web"></div>
+    <div class="container">
+        <h1>🎃Fright Fest Events 🎃</h1>
+        
+        <div class="event">
+            <h2 class="event-title">Haunted House Tour</h2>
+            <div class="event-time">🕐 7:00 PM - 10:00 PM</div>
+            <div class="event-location">📍 Ancient Manor, Spooky Street</div>
+            <div class="event-description">Explore the haunted mansion with our ghost tour guides. Not for the faint of heart!</div>
+        </div>
+
+        <div class="event">
+            <h2 class="event-title">Costume Contest</h2>
+            <div class="event-time">🕑 8:30 PM - 9:30 PM</div>
+            <div class="event-location">📍 Grand Ballroom</div>
+            <div class="event-description">Show off your best costume! Prizes for Most Scary, Most Creative, and Best Overall.</div>
+        </div>
+
+        <div class="event">
+            <h2 class="event-title">Midnight Magic Show</h2>
+            <div class="event-time">🕛 12:00 AM - 1:00 AM</div>
+            <div class="event-location">📍 Crystal Theater</div>
+            <div class="event-description">Witness supernatural illusions and spine-chilling magic tricks by the mysterious Dr. Shadow.</div>
+        </div>
+
+        <div class="event">
+            <h2 class="event-title">Pumpkin Carving Workshop</h2>
+            <div class="event-time">🕕 5:00 PM - 6:30 PM</div>
+            <div class="event-location">📍 Harvest Garden</div>
+            <div class="event-description">Create your own jack-o'-lantern! All materials provided. Best design wins a prize!</div>
+        </div>
+
+        <div class="event">
+            <h2 class="event-title">Monster Mash Dance Party</h2>
+            <div class="event-time">🕙 9:00 PM - 2:00 AM</div>
+            <div class="event-location">📍 Haunted Ballroom</div>
+            <div class="event-description">Dance the night away with our ghostly DJ playing the best Halloween hits!</div>
+        </div>
+    </div>
+</body>
+</html>
