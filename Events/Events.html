@@ -10,6 +10,7 @@
 
   <!-- Demo styles -->
   <style>
+    @import url(../assets/fonts/fonts.css);
     :root {
     --black: #040d17;
     --grey: #a6a9ad;
@@ -54,12 +55,24 @@
         background-color: black;
         height: 50px;
     }
+    #title {
+        color: #CBFFFF;
+        position: absolute;
+        top: 1%;
+        left: 50%;
+        font-size: 5em;
+        font-weight: bold;
+        font-family: shlop;
+        transform: translate(-50%);
+        text-align: center;
+    }
   </style>
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
-  <spline-viewer url="https://prod.spline.design/kNYOqtdoyCBbbMG6/scene.splinecode"></spline-viewer>
+  <spline-viewer loading-anim-type="none" url="https://prod.spline.design/kNYOqtdoyCBbbMG6/scene.splinecode"></spline-viewer>
 </head>
 
 <body>
+    <h1 id="title">EVENTS</h1>
     <div id="cover">
 
     </div>
