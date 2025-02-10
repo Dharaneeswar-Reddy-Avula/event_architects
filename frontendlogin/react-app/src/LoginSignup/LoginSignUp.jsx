@@ -52,15 +52,15 @@ const signup=async ()=>{
   return (
 
     <div className='loginsignup'>
-      <a href='http://localhost:5500/event_architects/'><svg xmlns="http://www.w3.org/2000/svg" height="60px" viewBox="0 -960 960 960" width="60px" fill="#000080" className='but' ><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></a>
+      <a href='http://localhost:5500/event_architects/'><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000080" className='but' ><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></a>
       <div className="loginsignup-container">
         <h1 className='forfont'>
           {state}
         </h1>
         <div className="loginsignup-fields">
          {state==="Register"?<input type="text" name="name" value={dataform.name} placeholder="enter your name" onChange={changehandler}/>:<></>}
-          <input type="email" name="email" value={dataform.email}  onChange={changehandler} placeholder="enter your email"/>
-          <input type="password" name="password"  onChange={changehandler} value={dataform.password} placeholder="enter your password"/>
+          <input type="email" name="email" value={dataform.email}  onChange={changehandler} placeholder="Enter your Email"/>
+          <input type="password" name="password"  onChange={changehandler} value={dataform.password} placeholder="Enter your Password"/>
         </div>
         <button onClick={()=>(state==="Login")?login():signup()}>Continue</button>
         {state==="Register"?<p className='loginsignup-login'>Already have an account?<span onClick={()=>setState("Login")}>Login here</span></p>:<></>}
