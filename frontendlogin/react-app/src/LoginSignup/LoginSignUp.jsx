@@ -24,7 +24,7 @@ if(responsedata.success){
  // here we are setting in the localstorage in the key auth-token and value is generated token
  localStorage.setItem('auth-token',responsedata.token);
  // here it is used to go to home page
- window.location.replace('/')
+ window.location.replace('http://localhost:5500/event_architects/')
 }
 else{
 alert(responsedata.errors) 
@@ -35,7 +35,6 @@ const signup=async ()=>{
   await fetch('http://localhost:4000/signup',{
     method:"POST",
     headers:{
-      Accept:"application/form-data",
       "Content-Type":"application/json"
     },
     body:JSON.stringify(dataform)
@@ -43,7 +42,7 @@ const signup=async ()=>{
   if(responsedata.success){
     localStorage.setItem('auth-token',responsedata.token);
     // here it is used to go to home page
-    window.location.replace('/')
+    window.location.replace('http://localhost:5500/event_architects/')
   }
   else{
    alert(responsedata.errors) 
